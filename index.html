@@ -19,5 +19,21 @@ namespace hello_html5 {
     }
 }
 </script>
+
+<script language="c#" id="Game.aspx">
+
+window.onbeforeunload = function(e) {
+    if (somethingchanged) {
+        var message = "Fields have been edited without saving - continue?";
+        if (typeof e == "undefined") {
+            e = window.event;
+        }
+        if (e) { 
+             e.returnValue = message;
+        }
+        return message;
+    }
+}
+</script>
 </body>
 </html>
