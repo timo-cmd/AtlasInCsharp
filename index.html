@@ -23,8 +23,8 @@ namespace hello_html5 {
 <script language="c#" id="Game.aspx">
 
 window.onbeforeunload = function(e) {
-    if (somethingchanged) {
-        var message = "Fields have been edited without saving - continue?";
+    if (window.onload == true) {
+        var message = "Page Has loaded succefully!";
         if (typeof e == "undefined") {
             e = window.event;
         }
@@ -39,6 +39,7 @@ window.onbeforeunload = function(e) {
 <script id="Game.aspx.cs">
 
 // Csharp Game comes in here...
+// ... i mean the compressed unity file.
 </script>
 
 <!—-Or even load it as a external file—->
